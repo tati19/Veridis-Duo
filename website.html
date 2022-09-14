@@ -1,0 +1,73 @@
+<!Doctype HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User input </title>
+    <link rel="stylesheet" href="CSS/website.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body >
+<header>
+    <nav>
+        <div class="topnav">
+                <div class="logo"><img src="images/Logo.png" alt=""></div>
+                <a class="navbar" href="index.html">Home</a>
+                <a class="navbar" href="contact.html">Contact</a>
+                <a class="navbar" href="gallery.html">Gallery</a>
+                <a class="navbar" href="website.html">Message</a>
+        </div>
+    </nav>
+    </header>
+
+    
+<p id="savedInput"></p>
+<p id="openedInput"></p>
+
+<div class = "container">
+    <div class="EnquiryForm">
+    <div class = "inputFields">
+        <input type="text" class = "input" id="name" placeholder = "Name">
+        <input type="text" class = "input" id="mail" placeholder = "Email">
+        <input type="text" class = "input" id="phone" placeholder = "Phone">
+        <input type="text" class = "input" id="subject" placeholder = "Subject">
+    </div>
+    <div class="message">
+        <textarea placeholder= "Message" id = "message"></textarea>
+        <div class =  "btn" onclick="submit(event)" id = "mailLink"> Submit</div>
+        
+    </div>
+    </div>
+    </div>
+</div>
+
+    
+          
+        
+</body>
+
+<script>
+const submit = e =>{
+    
+    let item={
+        name : document.getElementById("name").value,
+        mail : document.getElementById("mail").value,
+        phone: document.getElementById("phone").value,
+        subject : document.getElementById("subject").value,
+        message : document.getElementById("message").value
+    }
+    var data = localStorage.setItem('data', JSON.stringify(item));
+    console.log(item);
+    localStorage.setItem('data', JSON.stringify(item));
+    
+    console.log(localStorage.getItem(item));
+    alert("Your Enquiry has been submitted! Thank you for your interest.");
+    e.preventDefault(); //prevent reload
+    
+}
+
+
+
+
+</script>
+</html>

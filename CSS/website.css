@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #ffe0f6;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 100vh; 
+
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.EnquiryForm{
+    max-width: 550px;
+    margin: 0 auto;
+    background: #302d2f;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px #f4f4f4;
+}
+
+.inputFields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+
+}
+
+.inputFields,
+.message{
+    width: 48%;
+}
+
+.inputFields .input, 
+.message textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #FFC9C9;
+    padding: 10px;
+    color: #FFC9C9;
+    font-weight: bold;
+    width: 100%;
+}
+
+
+.message textarea{
+    height: 212px;
+}
+
+::-webkit-input-placeholder{
+    color: #FFC9C9;
+}
+
+.btn{
+    background: #FFC9C9;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 600px){
+    .EnquiryForm{
+        flex-direction: column;
+    }
+    .message textarea{
+        height: 80px;
+    }
+    .inputFields,
+    .message{
+        width: 100%;
+    }
+}
